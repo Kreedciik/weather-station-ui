@@ -58,7 +58,6 @@ const humiditySquare = new Square('humidity');
 
 tempSquare.drawSquare();
 humiditySquare.drawSquare();
-
 function showToday(){
     const today = new Date();
     dateElement.innerHTML = `${today.toDateString()}`
@@ -75,7 +74,7 @@ function showData(temp, humidity){
 }
 
 async function getData(){
-    const endpoint = 'http://localhost:3001/api/weather-service/live';
+    const endpoint = 'https://temperature-humidity.up.railway.app/api/weather-service/live';
     try {
         const response = await fetch(endpoint, {headers: 
             {
