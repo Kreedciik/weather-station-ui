@@ -64,13 +64,10 @@ function showToday(){
 }
 
 function showData(temp, humidity){
-    const temperature = parseFloat(temp);
-    const humid = Math.floor(parseInt(humidity));
-
-    tempSquare.updateData(temperature + '°C');
-    tempSquare.checkData(temperature);
-    humiditySquare.updateData(humid + '%');
-    humiditySquare.checkData(humid);
+    tempSquare.updateData(temp + '°C');
+    tempSquare.checkData(temp);
+    humiditySquare.updateData(humidity + '%');
+    humiditySquare.checkData(humidity);
 }
 
 async function getData(){
